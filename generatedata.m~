@@ -48,22 +48,13 @@ function [X,y] = generatedata(n,d,varargin)
 
 	if p.Results.dimensions > 1
 		x = randn(n,p.Results.dimensions);
-		w = ones(p.Results.dimensions,1);
+		w = ones(p.Results.dimensions);
 		y = x*w;
-		[~,ix] = sort(y,'descend');
-		y = y(ix) > 1;
-		D = x(ix,:) * p.Results.snr;
-		D = repmat(D,1,ceil(p.Results.nactivevox/p.Results.dimensions));
-		D = D(:,1:p.Results.nactivevox);
-	else
-		D = double(y) * p.Results.snr;
-		D = repmat(D,1,p.Results.nactivevox);
-	end
 	
   for i = 1:length(X)
     X{i} = zeros(n,d);
     activevox = z(randperm(length(z),nactivevox));
-    X{i}(:,activevox) = D;
+    X{i}(y,activevox) = p.Results.snr;
     X{i} = X{i} + randn(n,d);
   end
 end
