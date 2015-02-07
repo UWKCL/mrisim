@@ -1,0 +1,7 @@
+- 2/7
+
+In order to run “iterativelass_sim”, there are some required functions, such as “ConsoleProgressBar”, which can be downloaded here: 
+http://www.mathworks.com/matlabcentral/fileexchange/30297-consoleprogressbar
+
+
+Also, we need a function called dprime, I guess Chris has it on his local machine. 
