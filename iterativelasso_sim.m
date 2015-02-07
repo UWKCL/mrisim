@@ -1,4 +1,4 @@
-addpath('~/src/iterativelasso/');
+addpath('../iterativelasso/');
 
 [Xc,y] = generatedata(200, 1000,'nactivevox',200,'nsubjects',1,'dimensions',3,'snr',1);
 cvblocks = bsxfun(@eq,repmat((1:10)',10,1),1:10);
