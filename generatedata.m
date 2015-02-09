@@ -4,6 +4,7 @@ function [X,y] = generatedata(n,d,varargin)
   else
     defaultNActVox = n;
   end
+  
   p = inputParser;
   addRequired(p,'n',@isnumeric);
   addRequired(p,'d',@isnumeric);
