@@ -1,3 +1,9 @@
+% Set data
+%--------------------------------------------------------------------------
+data_path = 'rawDataPath';
+functScans = spm_select('FPList', fullfile(data_path,'RawEPI'), '^sM.*\.img$');
+structScans = spm_select('FPList', fullfile(data_path,'Structural'), '^sM.*\.img$');
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CLASSICAL STATISTICAL ANALYSIS (PARAMETRIC)
