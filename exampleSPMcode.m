@@ -14,7 +14,7 @@ onsets = load(fullfile(data_path,'sots.mat'));
 matlabbatch{1}.cfg_basicio.file_dir.dir_ops.cfg_mkdir.parent = cellstr(data_path);
 matlabbatch{1}.cfg_basicio.file_dir.dir_ops.cfg_mkdir.name = 'parametric';
 
-% Model Specification (copy and edit the categorical one)
+% Model Specification
 %--------------------------------------------------------------------------
 batch_categ = load(fullfile(data_path,'categorical_spec.mat'));
 matlabbatch{2} = batch_categ.matlabbatch{2};
